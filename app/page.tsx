@@ -1,3 +1,4 @@
+import Cocktails from "@/components/Cocktails";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import gsap from "gsap";
@@ -10,7 +11,7 @@ const Home = () => {
     <main className="h-[100vh]">
       <Navbar />
       <Hero />
-      <div className="h-dvh bg-black"></div>
+      <Cocktails />
     </main>
   );
 };

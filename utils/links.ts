@@ -105,7 +105,7 @@ export const cocktailLists: CocktailsProps[] = [
   },
 ];
 
-export const mockTailLists: CocktailsProps = [
+export const mockTailLists: CocktailsProps[] = [
   {
     name: "Tropical Bloom",
     country: "US",
@@ -136,7 +136,7 @@ export type ProfileProp = {
   imgPath: string;
 };
 
-export const profileLists: ProfileProp = [
+export const profileLists: ProfileProp[] = [
   {
     imgPath: "/images/profile1.png",
   },
