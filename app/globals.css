@@ -92,7 +92,7 @@ body {
     @apply relative z-10 min-h-dvh w-full border border-transparent;
 
     h1 {
-      @apply md:mt-32 mt-41 text-8xl md:text-4xl md:text-[15vw] leading-none text-center font-modern-negra;
+      @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;
     }
 
     .left-leaf {
@@ -322,9 +322,10 @@ body {
 
       .info {
         @apply space-y-4 lg:translate-y-20;
-      }
-      .title {
-        @apply font-modern-negra md:text-3xl text-2xl text-yellow max-w-35;
+
+        #title {
+          @apply font-modern-negra md:text-6xl text-3xl text-yellow max-w-40;
+        }
       }
 
       .details {

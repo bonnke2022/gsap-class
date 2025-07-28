@@ -3,6 +3,9 @@ import { cocktailLists, CocktailsProps, mockTailLists } from "@/utils/links";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Cocktails = () => {
   useGSAP(() => {
@@ -55,6 +58,7 @@ const Cocktails = () => {
                       {cocktail.country} | {cocktail.detail}
                     </p>
                   </div>
+                  <span>- {cocktail.price}</span>
                 </li>
               );
             })}
@@ -73,6 +77,7 @@ const Cocktails = () => {
                       {cocktail.country} | {cocktail.detail}
                     </p>
                   </div>
+                  <span>- {cocktail.price}</span>
                 </li>
               );
             })}

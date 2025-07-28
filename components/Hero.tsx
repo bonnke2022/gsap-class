@@ -6,6 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -18,7 +21,7 @@ const Hero = () => {
 
     gsap.from(heroSplit.chars, {
       yPercent: 100,
-      duration: 1,
+      duration: 1.8,
       ease: "expo.out",
       stagger: 0.06,
     });
@@ -42,7 +45,7 @@ const Hero = () => {
         },
       })
       .to(".right-leaf", { y: 200 }, 0)
-      .to(".left-leaf", { y: 200 }, 0);
+      .to(".left-leaf", { y: -200 }, 0);
 
     const startValue = isMobile ? "top 50%" : "center 60%";
     const endValue = isMobile ? "120% top" : "bottom top";
@@ -63,7 +66,7 @@ const Hero = () => {
     };
   }, []);
   return (
-    <div>
+    <>
       <section id="hero" className="noisy">
         <h1 className="title">MOJITO</h1>
         <Image
@@ -109,7 +112,7 @@ const Hero = () => {
           preload="auto"
         />
       </div>
-    </div>
+    </>
   );
 };
 
